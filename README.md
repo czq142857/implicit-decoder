@@ -31,7 +31,7 @@ Requirements:
 Our code has been tested with Python 3.5, TensorFlow 1.8.0, CUDA 9.1 and cuDNN 7.0 on Ubuntu 16.04 and Windows 10.
 
 
-## Data Set and Pre-trained weights
+## Datasets and Pre-trained weights
 The original voxel models and rendered views are from [HSP](https://github.com/chaene/hsp).
 Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html).
 
