@@ -4,8 +4,9 @@ The tensorflow code for paper "Learning Implicit Fields for Generative Shape Mod
 ### [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
 
 
-<img src='img/teaser.png' width=1000 /><img src='img/plane.gif' width=200 /><img src='img/car.gif' width=200 /><img src='img/chair.gif' width=200 /><img src='img/rifle.gif' width=200 />
-<img src='img/table.gif' width=200 />
+<img src='img/teaser.png' width=1000 />
+<img src='img/plane.gif' width=250 /><img src='img/car.gif' width=250 /><img src='img/chair.gif' width=250 />
+<img src='img/rifle.gif' width=250 /><img src='img/table.gif' width=250 />
 
 
 ## Introduction
@@ -36,10 +37,10 @@ Our code has been tested with Python 3.5, TensorFlow 1.8.0, CUDA 9.1 and cuDNN 7
 The original voxel models and rendered views are from [HSP](https://github.com/chaene/hsp).
 Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html).
 
-We provide the ready-to-use datasets in hdf5 format, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in our experiments to compare with other methods.
+We provide the ready-to-use datasets in hdf5 format, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in the experiments in our paper.
 
-- [IMAE&IMGAN]()
-- [IMSVR]()
+- [IMAE&IMGAN](https://drive.google.com/open?id=1ERuwUnRMF-5LEfdts5vv6tMpEZPX_pV1)
+- [IMSVR](https://drive.google.com/open?id=1n-eGpGt6NEV39zqY2Vykl4yeZTzPtn9l)
 
 Backup links:
 - [IMAE&IMGAN]()
@@ -68,7 +69,7 @@ python main.py
 ```
 You can change some lines in main.py to adjust the number of samples and the sampling resolution.
 
-To train the network for single-view reconstruction, after training the autoencoder, copy the weights and latent codes to the corresponding folder in IMSVR. Go to IMSVR and use the following commands to train IM-SVR and get some samples:
+To train the network for single-view reconstruction, after training the autoencoder, copy the weights and latent codes to the corresponding folders in IMSVR. Go to IMSVR and use the following commands to train IM-SVR and get some samples:
 ```
 python main.py --train --epoch 1000
 python main.py
