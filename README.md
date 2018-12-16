@@ -4,12 +4,8 @@ The tensorflow code for paper "Learning Implicit Fields for Generative Shape Mod
 ### [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
 
 
-<img src='img/teaser.png' width=1000 />
-<img src='img/plane.gif' width=250 />
-<img src='img/car.gif' width=250 />
-<img src='img/chair.gif' width=250 />
-<img src='img/rifle.gif' width=250 />
-<img src='img/table.gif' width=250 />
+<img src='img/teaser.png' width=1000 /><img src='img/plane.gif' width=200 /><img src='img/car.gif' width=200 /><img src='img/chair.gif' width=200 /><img src='img/rifle.gif' width=200 />
+<img src='img/table.gif' width=200 />
 
 
 ## Introduction
@@ -36,18 +32,21 @@ Requirements:
 Our code has been tested with Python 3.5, TensorFlow 1.8.0, CUDA 9.1 and cuDNN 7.0 on Ubuntu 16.04 and Windows 10.
 
 
-### Data Set and Pre-trained weights
+## Data Set and Pre-trained weights
 The original voxel models and rendered views are from [HSP](https://github.com/chaene/hsp).
 Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html).
-We provide the ready-to-use datasets in hdf5 formats, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in our experiments to compare with other methods.
-[IMAE&IMGAN]()
-[IMSVR]()
+
+We provide the ready-to-use datasets in hdf5 format, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in our experiments to compare with other methods.
+
+- [IMAE&IMGAN]()
+- [IMSVR]()
+
 Backup links:
-[IMAE&IMGAN]()
-[IMSVR]()
+- [IMAE&IMGAN]()
+- [IMSVR]()
 
 
-### Usage
+## Usage
 
 To train an autoencoder, go to IMGAN and use the following commands for progressive training. You may want to copy the commands in a .bat or .sh file.
 ```
