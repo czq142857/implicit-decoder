@@ -4,7 +4,7 @@ The tensorflow code for paper "Learning Implicit Fields for Generative Shape Mod
 ### [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
 
 
-<img src='img/teaser.png' width=1000 /><img src='img/plane.gif' width=250 /><img src='img/car.gif' width=250 /><img src='img/chair.gif' width=250 /><img src='img/rifle.gif' width=250 /><img src='img/table.gif' width=250 /><img src='img/font.gif' width=250 />
+<img src='img/teaser.png' /><img src='img/plane.gif' /><img src='img/car.gif' /><img src='img/chair.gif' /><img src='img/rifle.gif' /><img src='img/table.gif' /><img src='img/font.gif' />
 
 
 ## Introduction
