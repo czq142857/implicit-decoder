@@ -41,8 +41,8 @@ We provide the ready-to-use datasets in hdf5 format, together with our pre-train
 - [IMSVR](https://drive.google.com/open?id=1n-eGpGt6NEV39zqY2Vykl4yeZTzPtn9l)
 
 Backup links:
-- [IMAE&IMGAN]()
-- [IMSVR]()
+- [IMAE&IMGAN](https://pan.baidu.com/s/12pqJNebP3s9IGUNteoZLRw)
+- [IMSVR](https://pan.baidu.com/s/1Uosl_luOHX242nFjofEOwQ)
 
 
 ## Usage
