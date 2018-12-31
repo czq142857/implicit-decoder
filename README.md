@@ -1,7 +1,7 @@
 # implicit-decoder
-The tensorflow code for paper "Learning Implicit Fields for Generative Shape Modeling", [Zhiqin Chen](http://www.sfu.ca/~zhiqinc/),  [Hao (Richard) Zhang](http://www.cs.sfu.ca/~haoz/).
+The tensorflow code for paper "Learning Implicit Fields for Generative Shape Modeling", [Zhiqin Chen](https://www.sfu.ca/~zhiqinc/),  [Hao (Richard) Zhang](https://www.cs.sfu.ca/~haoz/).
 
-### [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
+### [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
 
 
 <img src='img/teaser.png' /><img src='img/plane.gif' /><img src='img/car.gif' /><img src='img/chair.gif' /><img src='img/rifle.gif' /><img src='img/table.gif' /><img src='img/font.gif' />
@@ -33,7 +33,7 @@ Our code has been tested with Python 3.5, TensorFlow 1.8.0, CUDA 9.1 and cuDNN 7
 
 ## Datasets and Pre-trained weights
 The original voxel models and rendered views are from [HSP](https://github.com/chaene/hsp).
-Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](http://www.sfu.ca/~zhiqinc/imgan/Readme.html).
+Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html).
 
 We provide the ready-to-use datasets in hdf5 format, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in the experiments in our paper.
 
