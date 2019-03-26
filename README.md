@@ -47,7 +47,7 @@ Backup links:
 
 ## Usage
 
-For data preparation, see directory [point_sampling](https://github.com/czq142857/implicit-decoder/tree/master/point_sampling).
+For data preparation, please see directory [point_sampling](https://github.com/czq142857/implicit-decoder/tree/master/point_sampling).
 
 To train an autoencoder, go to IMGAN and use the following commands for progressive training. You may want to copy the commands in a .bat or .sh file.
 ```
