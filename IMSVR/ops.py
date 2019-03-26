@@ -12,6 +12,8 @@ def lrelu(x, leak=0.02):
 
 def batch_norm(input, phase_train):
 	return tf.contrib.layers.batch_norm(input, decay=0.999, updates_collections=None, epsilon=1e-5, scale=True, is_training=phase_train)
+	# better using instance normalization since the batch size is 1
+	#return tf.contrib.layers.instance_norm(input)
 
 def linear(input_, output_size, scope):
 	shape = input_.get_shape().as_list()
