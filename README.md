@@ -16,8 +16,8 @@ If you find our work useful in your research, please consider citing:
 	@article{chen2018implicit_decoder,
 	  title={Learning Implicit Fields for Generative Shape Modeling},
 	  author={Chen, Zhiqin and Zhang, Hao},
-	  journal={arXiv preprint arXiv:1812.02822},
-	  year={2018}
+	  journal={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+	  year={2019}
 	}
 
 ## Dependencies
