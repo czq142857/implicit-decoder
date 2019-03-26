@@ -13,7 +13,7 @@ If you have downloaded the voxelized data from HSP(https://github.com/chaene/hsp
 python vox2pointvaluepair_from_hsp.py
 ```
 
-If you have prepared your own voxel data (.binvox), please change the directories in the code and use the following command:
+If you have prepared your own voxel data (64^3 .binvox), please change the directories in the code and use the following command:
 ```
 python vox2pointvaluepair_from_binvox.py
 ```
