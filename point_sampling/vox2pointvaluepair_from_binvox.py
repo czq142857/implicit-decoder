@@ -36,7 +36,7 @@ def hierarchicalfloodFill(img64,dim):
 			for k in range(dim_voxel):
 				img32[i,j,k] = np.max(img64[i*multiplier:(i+1)*multiplier,j*multiplier:(j+1)*multiplier,k*multiplier:(k+1)*multiplier])
 	
-	out32 = floodFill(img32, [(0,0,0),(31,0,0),(0,31,0),(31,31,0),(0,0,31),(31,0,31),(0,31,31),(31,31,31)], 32)
+	img32 = floodFill(img32, [(0,0,0),(31,0,0),(0,31,0),(31,31,0),(0,0,31),(31,0,31),(0,31,31),(31,31,31)], 32)
 	for i in range(1,dim_voxel-1):
 		for j in range(1,dim_voxel-1):
 			for k in range(1,dim_voxel-1):
