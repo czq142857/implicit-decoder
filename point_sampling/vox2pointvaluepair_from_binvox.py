@@ -36,12 +36,18 @@ def hierarchicalfloodFill(img64,dim):
 			for k in range(dim_voxel):
 				img32[i,j,k] = np.max(img64[i*multiplier:(i+1)*multiplier,j*multiplier:(j+1)*multiplier,k*multiplier:(k+1)*multiplier])
 	
-	out32 = floodFill(img32, [(0,0,0),(31,0,0),(0,31,0),(31,31,0),(0,0,31),(31,0,31),(0,31,31),(31,31,31)], 32)
+	img32 = floodFill(img32, [(0,0,0),(31,0,0),(0,31,0),(31,31,0),(0,0,31),(31,0,31),(0,31,31),(31,31,31)], 32)
 	for i in range(1,dim_voxel-1):
 		for j in range(1,dim_voxel-1):
 			for k in range(1,dim_voxel-1):
-				if img32[i,j,k]>0 and img32[i+1,j,k]>0 and img32[i-1,j,k]>0 and img32[i,j+1,k]>0 and img32[i,j-1,k]>0 and img32[i,j,k+1]>0 and img32[i,j,k-1]>0:
-						img64[i*multiplier:(i+1)*multiplier,j*multiplier:(j+1)*multiplier,k*multiplier:(k+1)*multiplier] = np.ones([2,2,2],np.uint8)
+				occupied_flag = True
+				for i0 in range(-1,2):
+					for j0 in range(-1,2):
+						for k0 in range(-1,2):
+							if i0==0 and j0==0 and k0==0: continue
+							if img32[i+i0,j+j0,k+k0]==0: occupied_flag = False
+				if occupied_flag:
+					img64[i*multiplier:(i+1)*multiplier,j*multiplier:(j+1)*multiplier,k*multiplier:(k+1)*multiplier] = np.ones([2,2,2],np.uint8)
 	
 	out64 = floodFill(img64, [(0,0,0),(63,0,0),(0,63,0),(63,63,0),(0,0,63),(63,0,63),(0,63,63),(63,63,63)], 64)
 	
