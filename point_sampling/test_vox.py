@@ -6,6 +6,7 @@ import tensorflow as tf
 import numpy as np
 import h5py
 import cv2
+import mcubes
 
 data_dict = h5py.File('samplechair/samplechair_vox.hdf5', 'r')
 data_points16 = data_dict['points_16'][:]
@@ -27,6 +28,8 @@ img3 = np.clip(np.amax(batch_voxels, axis=2)*256, 0,255).astype(np.uint8)
 cv2.imwrite(str(dxb)+"_vox_1.png",img1)
 cv2.imwrite(str(dxb)+"_vox_2.png",img2)
 cv2.imwrite(str(dxb)+"_vox_3.png",img3)
+vertices, triangles = mcubes.marching_cubes(batch_voxels, 0.5)
+mcubes.export_mesh(vertices, triangles, str(dxb)+"_vox.dae", str(dxb))
 
 
 batch_points_int = data_points16[dxb,:]
@@ -39,6 +42,8 @@ img3 = np.clip(np.amax(real_model, axis=2)*256, 0,255).astype(np.uint8)
 cv2.imwrite(str(dxb)+"_16_1.png",img1)
 cv2.imwrite(str(dxb)+"_16_2.png",img2)
 cv2.imwrite(str(dxb)+"_16_3.png",img3)
+vertices, triangles = mcubes.marching_cubes(batch_voxels, 0.5)
+mcubes.export_mesh(vertices, triangles, str(dxb)+"_16.dae", str(dxb))
 
 
 batch_points_int = data_points32[dxb,:]
@@ -51,6 +56,8 @@ img3 = np.clip(np.amax(real_model, axis=2)*256, 0,255).astype(np.uint8)
 cv2.imwrite(str(dxb)+"_32_1.png",img1)
 cv2.imwrite(str(dxb)+"_32_2.png",img2)
 cv2.imwrite(str(dxb)+"_32_3.png",img3)
+vertices, triangles = mcubes.marching_cubes(batch_voxels, 0.5)
+mcubes.export_mesh(vertices, triangles, str(dxb)+"_32.dae", str(dxb))
 
 
 batch_points_int = data_points64[dxb,:]
@@ -63,3 +70,5 @@ img3 = np.clip(np.amax(real_model, axis=2)*256, 0,255).astype(np.uint8)
 cv2.imwrite(str(dxb)+"_64_1.png",img1)
 cv2.imwrite(str(dxb)+"_64_2.png",img2)
 cv2.imwrite(str(dxb)+"_64_3.png",img3)
+vertices, triangles = mcubes.marching_cubes(batch_voxels, 0.5)
+mcubes.export_mesh(vertices, triangles, str(dxb)+"_64.dae", str(dxb))
