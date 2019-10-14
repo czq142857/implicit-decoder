@@ -6,9 +6,13 @@ The tensorflow code for paper "Learning Implicit Fields for Generative Shape Mod
 
 <img src='img/teaser.png' /><img src='img/plane.gif' /><img src='img/car.gif' /><img src='img/chair.gif' /><img src='img/rifle.gif' /><img src='img/table.gif' /><img src='img/font.gif' />
 
+## Update
+We have an improved implementation [here](https://github.com/czq142857/IM-NET), where we trained one model on the 13 ShapeNet categories.
+
 
 ## Introduction
 We advocate the use of implicit fields for learning generative models of shapes and introduce an implicit field decoder, called IM-NET, for shape generation, aimed at improving the visual quality of the generated shapes. An implicit field assigns a value to each point in 3D space, so that a shape can be extracted as an iso-surface. IM-NET is trained to perform this assignment by means of a binary classifier. Specifically, it takes a point coordinate, along with a feature vector encoding a shape, and outputs a value which indicates whether the point is outside the shape or not. By replacing conventional decoders by our implicit decoder for representation learning (via IM-AE) and shape generation (via IM-GAN), we demonstrate superior results for tasks such as generative shape modeling, interpolation, and single-view 3D reconstruction, particularly in terms of visual quality.
+
 
 ## Citation
 If you find our work useful in your research, please consider citing:
@@ -19,6 +23,7 @@ If you find our work useful in your research, please consider citing:
 	  journal={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 	  year={2019}
 	}
+
 
 ## Dependencies
 Requirements:
@@ -43,8 +48,6 @@ We provide the ready-to-use datasets in hdf5 format, together with our pre-train
 Backup links:
 - [IMAE&IMGAN](https://pan.baidu.com/s/12pqJNebP3s9IGUNteoZLRw)
 - [IMSVR](https://pan.baidu.com/s/1Uosl_luOHX242nFjofEOwQ)
-
-We have an improved implementation [here](https://github.com/czq142857/IM-NET), where we train the network on the 13 shape categories in ShapeNet.
 
 
 ## Usage
