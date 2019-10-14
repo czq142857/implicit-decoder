@@ -1,7 +1,7 @@
 # implicit-decoder
 The tensorflow code for paper "Learning Implicit Fields for Generative Shape Modeling", [Zhiqin Chen](https://www.sfu.ca/~zhiqinc/),  [Hao (Richard) Zhang](https://www.cs.sfu.ca/~haoz/).
 
-### [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822)
+### [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822) |   [improved implementation](https://github.com/czq142857/IM-NET)
 
 
 <img src='img/teaser.png' /><img src='img/plane.gif' /><img src='img/car.gif' /><img src='img/chair.gif' /><img src='img/rifle.gif' /><img src='img/table.gif' /><img src='img/font.gif' />
@@ -43,6 +43,8 @@ We provide the ready-to-use datasets in hdf5 format, together with our pre-train
 Backup links:
 - [IMAE&IMGAN](https://pan.baidu.com/s/12pqJNebP3s9IGUNteoZLRw)
 - [IMSVR](https://pan.baidu.com/s/1Uosl_luOHX242nFjofEOwQ)
+
+We have an improved implementation [here](https://github.com/czq142857/IM-NET), where we train the network on the 13 shape categories in ShapeNet.
 
 
 ## Usage
