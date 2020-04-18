@@ -1,13 +1,19 @@
 # implicit-decoder
 The tensorflow code for paper "Learning Implicit Fields for Generative Shape Modeling", [Zhiqin Chen](https://www.sfu.ca/~zhiqinc/),  [Hao (Richard) Zhang](https://www.cs.sfu.ca/~haoz/).
 
-### [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [paper](https://arxiv.org/abs/1812.02822) |   [improved implementation](https://github.com/czq142857/IM-NET)
+### [Project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html) |   [Paper](https://arxiv.org/abs/1812.02822)
+
+### [Improved TensorFlow1 implementation](https://github.com/czq142857/IM-NET)
+
+### [Improved PyTorch implementation](https://github.com/czq142857/IM-NET-pytorch)
 
 
 <img src='img/teaser.png' /><img src='img/plane.gif' /><img src='img/car.gif' /><img src='img/chair.gif' /><img src='img/rifle.gif' /><img src='img/table.gif' /><img src='img/font.gif' />
 
 ## Update
 We have an improved implementation [here](https://github.com/czq142857/IM-NET), where we trained one model on the 13 ShapeNet categories.
+
+We have a PyTorch implementation [here](https://github.com/czq142857/IM-NET-pytorch).
 
 
 ## Introduction
@@ -28,7 +34,7 @@ If you find our work useful in your research, please consider citing:
 ## Dependencies
 Requirements:
 - Python 3.5 with numpy, scipy and h5py
-- [Tensorflow](https://www.tensorflow.org/get_started/os_setup)
+- [Tensorflow 1](https://www.tensorflow.org/get_started/os_setup)
 - [PyMCubes](https://github.com/pmneila/PyMCubes) (for matching cubes)
 - [pycollada](https://github.com/pycollada/pycollada) (for writing .dae files)
 - [OpenCV-Python](https://opencv-python-tutroals.readthedocs.io/en/latest/) (for reading and writing images)
@@ -40,7 +46,7 @@ Our code has been tested with Python 3.5, TensorFlow 1.8.0, CUDA 9.1 and cuDNN 7
 The original voxel models and rendered views are from [HSP](https://github.com/chaene/hsp).
 Since our network takes point-value pairs, the voxel models require further sampling. The sampling method can be found in our [project page](https://www.sfu.ca/~zhiqinc/imgan/Readme.html).
 
-We provide the ready-to-use datasets in hdf5 format, together with our pre-trained weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in the experiments in our paper.
+We provide the ready-to-use datasets in hdf5 format, together with our pre-trained network weights. The weights for IM-GAN is the ones we used in our demo video. The weights for IM-SVR is the ones we used in the experiments in our paper.
 
 - [IMAE&IMGAN](https://drive.google.com/open?id=1ERuwUnRMF-5LEfdts5vv6tMpEZPX_pV1)
 - [IMSVR](https://drive.google.com/open?id=1n-eGpGt6NEV39zqY2Vykl4yeZTzPtn9l)
