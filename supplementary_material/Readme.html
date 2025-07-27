@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title>Implicit Decoder</title>
+		<link rel="shortcut icon" href="logo.png" />
+	</head>
+	<body bgcolor="#F0F0F0">
+<div id="apDiv0" width="80%" style="font-size:24; position:absolute; top:0.3%; left:10%;">
+	
+	
+<h1>Supplementary Material</h1>
+<br/><br/><br/><br/>
+Hi, there. If you are looking for demos, they are in section 5 and 6. Here are some shortcuts.<br/>
+Each video is about 10MB. You may want to use WIFI instead of cellular data.<br/>
+<h3>Plane &nbsp&nbsp&nbsp&nbsp Car &nbsp&nbsp&nbsp&nbsp Chair</h3>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-3D/interp_IM-GAN_plane.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-3D/interp_IM-GAN_car.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-3D/interp_IM-GAN_chair.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<h3>Rifle &nbsp&nbsp&nbsp&nbsp Table &nbsp&nbsp&nbsp&nbsp Font</h3>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-3D/interp_IM-GAN_rifle.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-3D/interp_IM-GAN_table.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<video width="400" height="400" controls preload="none">
+  <source src="IM-GAN-2D/font_interpolation.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br/><br/><br/><br/>
+
+<h2>0. Paper, Code, Datasets and Pre-trained weights</h2>
+Paper: <a href="https://arxiv.org/abs/1812.02822">https://arxiv.org/abs/1812.02822</a><br/>
+Others: <a href="https://github.com/czq142857/implicit-decoder">https://github.com/czq142857/implicit-decoder</a>
+<br/><br/><br/><br/>
+
+<h2>1. Data preparation</h2>
+See <a href="data-preparation.pdf">data-preparation.pdf</a>
+<br/><br/><br/><br/>
+
+<h2>2. Network structures and training configurations</h2>
+See <a href="network-structure.pdf">network-structure.pdf</a>
+<br/><br/><br/><br/>
+
+<h2>3. Toy experiments (extension of Figure 3)</h2>
+See <a href="TOY/toy-experiments.pdf">toy-experiments.pdf</a>. The document provides several toy experiments to compare the different features learned by CNN-based models and implicit-decoder-based models. <br/>
+Some animated interpolations (see more details at the document): <br/>
+AE trained with CNN decoder: <img src="TOY/ae_cnn.gif"> <img src="TOY/ae_cnn_blur.gif">
+&nbsp&nbsp&nbsp&nbsp
+AE trained with implicit decoder: <img src="TOY/ae_imp.gif"> <img src="TOY/ae_imp_blur.gif"><br/>
+VAE trained with CNN decoder: <img src="TOY/vae_cnn.gif"> <img src="TOY/vae_cnn_blur.gif">
+&nbsp&nbsp&nbsp&nbsp
+VAE trained with implicit decoder: <img src="TOY/vae_imp.gif"> <img src="TOY/vae_imp_blur.gif"><br/>
+WGAN trained with CNN decoder: <img src="TOY/wgan_cnn.gif"> <img src="TOY/wgan_cnn_blur.gif">
+&nbsp&nbsp&nbsp&nbsp
+WGAN trained with implicit decoder: <img src="TOY/wgan_imp.gif"> <img src="TOY/wgan_imp_blur.gif"><br/>
+<br/><br/><br/><br/>
+
+<h2>4. Auto-encoding 3D shapes (extension of Figure 4)</h2>
+Each of the following images contains the visual comparisons of the first 16 shapes (sorted by name) from the testing set of that category.<br/>
+<a href="IM-AE/plane.png">plane</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-AE/car.png">car</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-AE/chair.png">chair</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-AE/rifle.png">rifle</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-AE/table.png">table</a>
+<br/><br/><br/><br/>
+
+<h2>5. 3D shape generation and interpolation (extension of Figure 6, videos of interpolations, etc.)</h2>
+(a) 16 randomly generated shapes for each category for each model.<br/>
+<a href="IM-GAN-3D/samples_3DGAN.png">samples_3DGAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/samples_PC-GAN.png">samples_PC-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/samples_CNN-GAN.png">samples_CNN-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/samples_IM-GAN256.png">samples_IM-GAN256</a> <br/><br/>
+(b) Samples comparing interpolations in IM-AE and IM-GAN latent spaces.<br/>
+<a href="IM-GAN-3D/compare_AE_GAN_latent_space.png">compare_AE_GAN_latent_space</a> <br/><br/>
+(c) IM-GAN interpolation videos. Chair and table were trained at 64^3 resolution and others at 128^3. All shapes were retrieved using marching cubes at 256^3 resolution.<br/>
+<a href="IM-GAN-3D/interp_IM-GAN_plane.mp4">plane</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/interp_IM-GAN_car.mp4">car</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/interp_IM-GAN_chair.mp4">chair</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/interp_IM-GAN_rifle.mp4">rifle</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/interp_IM-GAN_table.mp4">table</a> <br/><br/>
+(d) CNN-GAN interpolation videos of chair and table for comparison (trained and sampled at 64^3).<br/>
+<a href="IM-GAN-3D/interp_CNN-GAN_chair.mp4">chair</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-3D/interp_CNN-GAN_table.mp4">table</a> <br/><br/><br/><br/>
+
+
+<h2>6. 2D shape generation and interpolation (extension of Figure 7 and videos of font interpolations)</h2>
+(a) 1024 randomly generated samples for each model.<br/>
+Not binarized: &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/DCGAN.png">DCGAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/CNN-GAN.png">CNN-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/IM-GAN.png">IM-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/VAE_CNN.png">VAE_CNN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/VAE_IM.png">VAE_IM</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/WGAN_CNN.png">WGAN_CNN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/WGAN_IM.png">WGAN_IM</a> <br/>
+Binarized: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="IM-GAN-2D/DCGAN_binarized.png">DCGAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/CNN-GAN_binarized.png">CNN-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/IM-GAN_binarized.png">IM-GAN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/VAE_CNN_binarized.png">VAE_CNN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/VAE_IM_binarized.png">VAE_IM</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/WGAN_CNN_binarized.png">WGAN_CNN</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-GAN-2D/WGAN_IM_binarized.png">WGAN_IM</a> <br/><br/>
+
+(b) A video showing font interpolations with IM-GAN trained on 64^2 data and sampled at 128^2.<br/>
+<a href="IM-GAN-2D/font_interpolation.mp4">font</a> <br/><br/><br/><br/>
+
+<h2>7. Single-view 3D reconstruction (extension of Figure 8 and evaluation results by chamfer distance)</h2>
+(a) Each of the following images contains the visual comparisons of the first 16 shapes (sorted by name) from the testing set of that category.<br/>
+<a href="IM-SVR/plane.png">plane</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-SVR/car.png">car</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-SVR/chair.png">chair</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-SVR/rifle.png">rifle</a> &nbsp&nbsp&nbsp&nbsp 
+<a href="IM-SVR/table.png">table</a>
+<br/><br/>
+(b) Evaluation results by chamfer distance<br/>
+<a href="IM-SVR/results_CD.pdf">results_CD</a>
+<br/><br/>
+
+
+</div>
+	</body>
+</html>
